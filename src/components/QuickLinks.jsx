@@ -1,9 +1,26 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const linkVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1 },
+};
+
+const icons = {
+  digitalServices: (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 mx-auto mb-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2 2 4-4m2 0l4 4 5-5M5 12l2 2m6-6l4 4M19 12l2 2" />
+    </svg>
+  ),
+  initiatives: (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 mx-auto mb-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-3 3v-6m-4 6v-6m-2 6h2m4 0h2m-6 0h-2m10 0h-2m-2 0h2m-2 0h-2m-2 0v2m0-6v-2m0 0V9m0-2V7m0 4V9" />
+    </svg>
+  ),
+  newsUpdates: (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 mx-auto mb-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l6 6 6-6m0 0l6 6 6-6M3 6l6 6 6-6m0 0l6 6 6-6" />
+    </svg>
+  ),
 };
 
 const QuickLinks = () => {
@@ -56,70 +73,46 @@ const QuickLinks = () => {
           animate="visible"
           variants={linkVariants}
           transition={{ duration: 1, ease: "easeOut" }}
+          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}
         >
           Quick Links
-          <span className="absolute inset-x-0 bottom-0 border-b-4 border-red-600 -z-10 transform scale-x-0 origin-bottom-left transition-transform duration-500 group-hover:scale-x-100" />
         </motion.h3>
         <div className="flex flex-wrap justify-center gap-6">
           <motion.a 
             href="/digital-services"
-            className="relative bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-110 hover:bg-green-100 text-center text-red-600 border border-gray-200 hover:border-green-300 overflow-hidden"
+            className="relative bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-green-100 text-center text-gray-700 border border-gray-200 hover:border-green-300 overflow-hidden"
             variants={linkVariants}
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <motion.div 
-              className="absolute inset-0 bg-gradient-to-r from-green-200 to-green-300 opacity-20 -z-10"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.2 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            />
-            <h4 className="text-2xl font-semibold mb-3">Digital Services</h4>
+            {icons.digitalServices}
+            <h4 className="text-2xl font-semibold mb-3 text-red-600">Digital Services</h4>
             <p className="text-md">Explore a wide range of digital services available for you.</p>
-            <motion.div 
-              className="absolute bottom-0 left-0 w-full h-1 bg-red-600 transform -translate-y-1 transition-transform duration-500 group-hover:translate-y-0"
-            />
           </motion.a>
           <motion.a 
             href="/initiatives"
-            className="relative bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-110 hover:bg-green-100 text-center text-red-600 border border-gray-200 hover:border-green-300 overflow-hidden"
+            className="relative bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-green-100 text-center text-gray-700 border border-gray-200 hover:border-green-300 overflow-hidden"
             variants={linkVariants}
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <motion.div 
-              className="absolute inset-0 bg-gradient-to-r from-green-200 to-green-300 opacity-20 -z-10"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.2 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            />
-            <h4 className="text-2xl font-semibold mb-3">Initiatives</h4>
+            {icons.initiatives}
+            <h4 className="text-2xl font-semibold mb-3 text-red-600">Initiatives</h4>
             <p className="text-md">Learn about our latest initiatives and projects.</p>
-            <motion.div 
-              className="absolute bottom-0 left-0 w-full h-1 bg-red-600 transform -translate-y-1 transition-transform duration-500 group-hover:translate-y-0"
-            />
           </motion.a>
           <motion.a 
             href="/news"
-            className="relative bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-110 hover:bg-green-100 text-center text-red-600 border border-gray-200 hover:border-green-300 overflow-hidden"
+            className="relative bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-green-100 text-center text-gray-700 border border-gray-200 hover:border-green-300 overflow-hidden"
             variants={linkVariants}
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <motion.div 
-              className="absolute inset-0 bg-gradient-to-r from-green-200 to-green-300 opacity-20 -z-10"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.2 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            />
-            <h4 className="text-2xl font-semibold mb-3">News & Updates</h4>
+            {icons.newsUpdates}
+            <h4 className="text-2xl font-semibold mb-3 text-red-600">News & Updates</h4>
             <p className="text-md">Stay updated with the latest news and updates.</p>
-            <motion.div 
-              className="absolute bottom-0 left-0 w-full h-1 bg-red-600 transform -translate-y-1 transition-transform duration-500 group-hover:translate-y-0"
-            />
           </motion.a>
         </div>
       </div>

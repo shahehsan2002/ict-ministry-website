@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const textVariants = {
@@ -11,7 +10,7 @@ const cardVariants = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Homepage = () => {
+const Hero = () => {
   return (
     <motion.div 
       className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 to-red-500 text-white overflow-hidden"
@@ -71,7 +70,7 @@ const Homepage = () => {
       </motion.div>
 
       <motion.h1 
-        className="text-4xl md:text-6xl font-extrabold mb-6 text-center z-10"
+        className="text-4xl md:text-6xl  font-extrabold mb-6  text-center z-10 "
         variants={textVariants}
         initial="hidden"
         animate="visible"
@@ -154,4 +153,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Hero;

@@ -1,6 +1,3 @@
-// src/components/NewsAndEvents.jsx
-
-
 const NewsAndEvents = () => {
   // Replace with actual data fetching logic
   const news = [
@@ -18,22 +15,22 @@ const NewsAndEvents = () => {
         <h2 className="text-3xl font-semibold text-red-600 mb-8">Latest News & Upcoming Events</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">News</h3>
+            <h3 className="text-2xl font-bold mb-4 text-red-600">News</h3>
             <ul>
               {news.map((item, index) => (
                 <li key={index} className="mb-4">
-                  <a href={item.link} className="text-lg text-blue-600 hover:underline">{item.title}</a>
+                  <a href={item.link} className="text-lg text-green-600 hover:underline">{item.title}</a>
                   <p className="text-gray-600">{item.date}</p>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-4">Events</h3>
+            <h3 className="text-2xl font-bold mb-4 text-red-600">Events</h3>
             <ul>
               {events.map((event, index) => (
                 <li key={index} className="mb-4">
-                  <a href={event.link} className="text-lg text-blue-600 hover:underline">{event.title}</a>
+                  <a href={event.link} className="text-lg text-green-600 hover:underline">{event.title}</a>
                   <p className="text-gray-600">{event.date} - {event.location}</p>
                 </li>
               ))}

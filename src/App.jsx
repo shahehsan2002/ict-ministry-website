@@ -10,6 +10,8 @@ import Services from "./pages/Services";
 import InitiativeDetail from "./pages/InitiativeDetail";
 import SearchResults from "./pages/SearchResults";
 import Login from "./pages/Login";
+import NewsDetail from "./pages/NewsDetail";
+import EventDetail from "./pages/EventDetail";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/initiatives/:id" element={<InitiativeDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/news" element={<NewsUpdates />} />
+        <Route path="/news/:id" element={<NewsDetail />} />
+        <Route path="/events/:id" element={<EventDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/login" element={<Login />} />

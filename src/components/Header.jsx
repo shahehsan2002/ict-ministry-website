@@ -13,9 +13,9 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-green-600 to-red-600 text-white p-4 shadow-lg z-50">
+    <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-green-600 to-red-600 text-white p-4 shadow-lg z-50 ">
       <div className="container mx-auto flex items-center justify-between">
-        <img src={logo} alt="ICT Ministry Logo" className="h-12" />
+        <img src={logo} alt="ICT Ministry Logo" className="h-8 lg:h-16"  />
         
         {/* Middle section with search bar */}
         <div className="hidden md:flex flex-grow justify-center">
