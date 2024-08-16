@@ -5,11 +5,16 @@ import Services from "../components/Services";
 import Hero from "../components/Hero";
 import Map from "../components/Map";
 import NewsAndEvents from "../components/NewsAndEvents";
+import NewsTicker from "../components/NewsTicker";
+import AboutUs from "./AboutUs";
+import Contact from "./Contact";
+import ResourcesSection from "../components/ResourcesSection";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <NewsTicker></NewsTicker>
       <QuickLinks></QuickLinks>
       <WelcomeMessage></WelcomeMessage>
       <Initiatives></Initiatives>
@@ -21,6 +26,9 @@ const Home = () => {
     </div>
     <div className="container mx-auto py-12 px-4">
       <NewsAndEvents />
+      <AboutUs/>
+      <ResourcesSection/>
+      <Contact/>
     </div>
     </div>
   );

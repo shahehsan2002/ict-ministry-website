@@ -9,7 +9,6 @@ import NewsUpdates from "./pages/NewsUpdates";
 import Services from "./pages/Services";
 import InitiativeDetail from "./pages/InitiativeDetail";
 import SearchResults from "./pages/SearchResults";
-import Login from "./pages/Login";
 import NewsDetail from "./pages/NewsDetail";
 import EventDetail from "./pages/EventDetail";
 
@@ -29,9 +28,6 @@ const App = () => {
         <Route path="/events/:id" element={<EventDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<SearchResults />} />
-          <Route path="/login" element={<Login />} />
-          {/* <Route path="/register" element={<Register />} /> */}
-          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
       </main>
       <Footer />
